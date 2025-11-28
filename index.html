@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task Management System – Expert UI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Inter font for professional look -->
+  <link href="https://fonts.googleapis.com/css?family=Inter:400,500,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Task Manager <span class="expert-badge">Expert System</span></h1>
+    <form id="task-form">
+      <input type="text" id="task-title" placeholder="Task Title" required>
+      <textarea id="task-desc" placeholder="Task Description" required></textarea>
+      <input type="date" id="task-date" required>
+      <select id="task-category" required>
+        <option value="Work">📄 Work</option>
+        <option value="Personal">😄 Personal</option>
+        <option value="Fitness">🏋️ Fitness</option>
+        <option value="Shopping">🛒 Shopping</option>
+        <option value="Other">✨ Other</option>
+      </select>
+      <button type="submit">Add Task</button>
+    </form>
+   <div class="filters">
+  <button id="filter-all" class="filter-btn active">All</button>
+  <button id="filter-complete" class="filter-btn">Completed</button>
+  <button id="filter-pending" class="filter-btn">Pending</button>
+</div>
+
+    <ul id="task-list" class="task-grid"></ul>
+  </div>
+  <!-- Reminder popup -->
+  <div id="reminder-popup" class="popup hidden">
+    <span id="reminder-text"></span>
+    <button id="close-popup">Close</button>
+  </div>
+  <!-- Floating Add Button -->
+  <button class="fab-add" onclick="document.getElementById('task-title').focus();">＋</button>
+  <script src="script.js"></script>
+</body>
+</html>
